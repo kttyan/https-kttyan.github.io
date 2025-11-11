@@ -1,77 +1,71 @@
-/* --------------------
-        全体
--------------------- */
+/* style.css の中身 */
 
 :root {
-  --theme-color: #00a0a0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  width: 100%;
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  padding: 30px;
-  color: #333;
+  --theme-color: #8A75D1;
 }
 
 /* --------------------
         見出し
 -------------------- */
-
 h1, h2, h3 {
   color: var(--theme-color);
-  border-bottom: dashed 0.1em var(--theme-color);
+  border-bottom: dashed 1px var(--theme-color);
+  padding-bottom: 5px; /* 下線との余白 */
+  margin-top: 2.5rem;   /* 各セクションの上の余白 */
+  margin-bottom: 1.5rem; /* 各セクションの下の余白 */
 }
 
-/* --------------------
-        リンク
--------------------- */
-
+/* リンクの色もテーマカラーに */
 a {
   color: var(--theme-color);
-  text-decoration: none;
 }
 
 /* --------------------
         リスト
 -------------------- */
-
-ul {
-  list-style: none;
+.star-list {
+  list-style: none; /* 元の・を消す */
+  padding-left: 0;  /* 左の余白を消す */
 }
-li:before {
+
+.star-list li:before {
   content: "★";
   color: var(--theme-color);
+  margin-right: 8px; /* ★と文字の間の余白 */
 }
 
 /* --------------------
           表
 -------------------- */
+.table th {
+   background-color: var(--theme-color);
+   color: #ffffff;
+}
 
-table {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border: solid 1px #f0f0f0;
-  min-width: 70%;
+/* --------------------
+        カード
+-------------------- */
+/* Bootstrapの .btn-primary の色を上書き */
+.btn-primary {
+  background-color: var(--theme-color);
+  border-color: var(--theme-color);
 }
-tr {
-  background-color: #fff;
+
+/* ボタンのホバー（マウスが乗った時）の色も設定 */
+.btn-primary:hover {
+  background-color: #705DAD; /* テーマカラーより少し暗い紫 */
+  border-color: #705DAD;
 }
-tr:nth-child(2n) {
-  background-color: #f9f9f9;
+
+/* .btn-outline-primary の色を上書き（透明背景・紫文字・紫枠線） */
+.btn-outline-primary {
+  color: var(--theme-color);
+  border-color: var(--theme-color);
 }
-th {
-  background: var(--theme-color);
-  color: #fff;
-}
-th, td {
-  border: solid 1px #f0f0f0;
-  padding: 0.5rem;
+
+/* .btn-outline-primary のホバー（マウスが乗った時）の色も設定 */
+.btn-outline-primary:hover {
+  color: #ffffff; /* 文字色を白に */
+  background-color: var(--theme-color); /* 背景色をテーマカラーに */
+  border-color: var(--theme-color);
 }
