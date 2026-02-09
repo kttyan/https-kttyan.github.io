@@ -113,6 +113,29 @@
       </div>
     </div>
 
+    <h3>Today's Star Rail Character</h3>
+    <div class="card">
+      <div class="card-body text-center">
+        <h5 class="card-title">今日の運命のパートナー</h5>
+        <hr>
+        
+        <div class="my-3 d-flex justify-content-center align-items-center" style="min-height: 400px;">
+          <img id="hsr-char-img" src="" alt="Loading..." 
+               class="img-fluid character-icon"
+               style="max-height:600px; object-fit: contain; opacity: 0; transition: opacity 0.5s;">
+        </div>
+        
+        <h4 id="hsr-char-name" class="fw-bold character-name mt-2">Loading...</h4>
+        
+        <p class="card-text mt-3 text-secondary small">
+          あなたの開拓の旅をサポートしてくれるかもしれません。
+        </p>
+        
+        <button onclick="drawStarRailCharacter()" class="btn btn-primary mt-2">
+          運命を回す
+        </button>
+      </div>
+    </div>
     <h3>Favorite Video</h3>
     <div class="row justify-content-center">
       <div class="col-lg-8"> 
@@ -127,5 +150,8 @@
       </div> 
     </div>
   </div> 
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
